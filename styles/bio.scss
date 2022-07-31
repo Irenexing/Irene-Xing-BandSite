@@ -1,0 +1,312 @@
+@use './partials/global';
+@use './partials/typography';
+@use './partials/variables' as *;
+@use './partials/mixins' as *;
+@use './partials/colors';
+
+
+.header {
+    background-color: colors.$primary-black;
+    color: colors.$primary-white;
+    width: 100%;
+    padding-top: 2.25rem;
+    @include tablet {
+        display: flex;
+        flex-direction: row;
+        width: auto;
+        justify-items: flex-start;
+        padding-top: 0rem;
+    }    
+
+    &__logo {
+        display: flex;
+        align-items: center;
+        margin: auto;
+        max-height: 1.25rem;
+        min-width: 7.5rem;
+        @include tablet {
+            margin:  1.5rem 2.25rem;
+        }
+        @include desktop {
+            flex-direction: row;
+            margin: 1.5rem 1.5rem 1.5rem 7rem;
+        }
+    }
+    &__navbar {
+        text-decoration: none;
+        list-style: none;
+        width: 50%;
+        text-align: center;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        @include tablet {
+            width: 100%;
+            margin: 0 1.5rem;
+            padding-top: 1.5rem;
+            padding-bottom: 1.5rem;
+        }
+        &--feature {
+            border-bottom: .1875rem solid colors.$primary-white;
+            font-weight: 600;
+        }
+        &-container {
+        display: flex;
+        margin: 0;
+        padding-left: 0;
+        }
+        @include tablet {
+            justify-content: space-around;
+        }
+        }
+    }
+
+
+.hero {
+
+    &__title  {
+    color: colors.$primary-white;
+    position: absolute;
+    justify-content: flex-start;
+    top: 50vw;
+    left: 8rem;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    font-size: 2rem;
+    line-height: 2rem;
+    @include tablet {
+        font-size: 3.75rem;
+        line-height: 4.25rem;
+        top: 40vw;
+        left: 16rem;
+    }
+    @include desktop {
+        top: 35vw;
+        left: 21rem;
+    }
+    }
+
+    &__background {
+         &-img {
+            width: 100%;
+         }
+         &-layer {
+            background-color:colors.$primary-black;
+            width: 100%;
+            height: 66.5vw;
+            opacity: 50%;
+            background-size: cover;
+            position: absolute;
+            z-index: 1;
+         }
+    }
+}   
+
+.about {
+    padding: 0rem 1rem 1rem 1rem;
+    @include tablet {
+        padding: 1.5rem 4.5rem 1.5rem 4.5rem;
+    }
+    @include desktop {
+        padding: 1.5rem 15.75rem 3rem 15.75rem;
+    }
+    &__img {
+        background-size: cover;
+        width: 100%;
+        padding-bottom: 1rem;
+        @include tablet {
+            padding-bottom: 2.25rem;
+            display: block;
+            justify-content: center;
+        }
+    }
+    &__title{
+        font-size: 2rem;
+        line-height: 2rem;
+        margin: 0;
+        padding-top: 1.5rem;
+        padding-bottom: 1rem;
+        @include tablet {
+            font-size: 2.25rem;
+            line-height: 2.75rem;
+            margin-left:-2.25rem;
+        }
+        @include desktop {
+            padding-bottom: 2.5rem;
+            margin-left:-7.875rem;
+        }
+    }
+     &__quote {
+            font-size: 1rem;
+            line-height: 1.375rem;
+            @include tablet {
+                font-size: 1.5rem;
+                line-height: 2rem;
+                &--tablet {
+                    font-size: .875rem;
+                }
+            }
+            @include desktop {
+                padding-right: 5rem;
+            }
+        }  
+    }
+
+.info {
+    margin: 0;
+    padding: 0 1rem 1rem 1rem;
+    @include tablet {
+        padding: 1.5rem 4.5rem 1.5rem 4.5rem;
+    }
+    @include desktop {
+            padding: 1.5rem 15.75rem 3rem 15.75rem;
+    }
+    &__title {
+        font-size: 1rem;
+        line-height: 1.375rem;
+        font-weight: 500;
+        @include tablet {
+            font-size: 1.5rem;
+            line-height: 2rem;
+            font-weight: 600;
+        }
+    }
+    &__paragraph {
+        font-size: .875rem; 
+        @include tablet {
+            font-size: .875rem;
+            line-height: 1.375rem;
+            width: auto;
+            &-container {
+            display: inline-flex;
+            flex-direction: row;
+            justify-content: space-between;
+            }
+        }
+    }
+}
+.photo-gallery {
+    padding: 1rem;
+    @include tablet {
+     padding:  3rem 2.25rem 2.25rem 2.25rem;
+    }
+    @include desktop {
+        padding: 1.5rem 7.875rem 3rem 7.875rem;
+    }
+    &__title {
+        font-size: 2rem;
+        line-height: 2rem;
+        @include tablet {
+            font-size: 2.25rem;
+            line-height: 2.75rem;
+            margin-top: 0;
+        }
+
+    }
+   &__imgs {
+    display: flex;
+    flex-direction: column;
+
+    @include tablet {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-content: space-between;
+    }
+    }
+    &__img {
+        width: 100%;
+        margin-bottom: 1rem;
+        @include tablet {
+            width: 31%;
+        }
+        @include desktop {
+            width: 30%;
+        }
+    }
+}
+
+.silver-background {
+    background-color: colors.$secondary-alabaster;
+    background-size: 150vw;
+}
+
+.footer {
+    background-color: colors.$primary-black;
+    color: colors.$primary-white;
+    padding: 1rem;
+    font-size: .8125rem;
+    line-height: 1.125rem;
+    @include desktop {
+        display: flex;
+        justify-content: space-between;
+        padding: 1.5rem 7.875rem 3rem 7.875rem;
+    }
+
+    &__title {
+        font-size: 2rem;
+        line-height: 2rem;
+        margin-top: 1rem;
+        @include tablet {
+            font-size: 2.25rem;
+            line-height: 2.75rem;
+            width: auto;
+            &-container {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+            }
+        }
+    }
+    &__icon {
+        display: flex;
+        width:30%;
+        justify-content: space-between;
+        @include tablet {
+            width: 20%;
+            justify-content: space-around;
+            margin-left: -7.5rem;
+        }
+    }
+    &__logo {
+        background-image: url('../assets/Logo/Logo-bandsite.svg');
+        background-size: contain;
+        background-repeat: no-repeat;
+        height: 1.25rem;
+        margin-top: 3rem;
+        @include tablet {
+            background-image: none;
+            &--tablet {
+            background-image: url('../assets/Logo/Logo-bandsite.svg');
+            background-size: contain;
+            background-repeat: no-repeat;
+            height: 1.25rem;
+            min-width: 7.5rem;
+            @include desktop {
+                background-image: none;
+            }
+            } 
+        }
+        @include desktop {
+            background-image: none;
+            &--desktop {
+                background-image: url('../assets/Logo/Logo-bandsite.svg');
+                background-size: contain;
+                background-repeat: no-repeat;
+                height: 1.25rem;
+                min-width: 7.5rem;
+                margin: 1rem;
+                } 
+        }
+    }
+    &__contact {
+        @include tablet {
+            display: flex;
+            justify-content: space-between
+            }
+        &-block {
+        @include desktop {
+            margin-right: 5rem;
+        }
+    }
+}
+}
