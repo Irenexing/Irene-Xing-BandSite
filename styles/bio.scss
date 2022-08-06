@@ -175,6 +175,115 @@
     background-size: 150vw;
 }
 
+.jointheconversation {
+    padding: 0rem 1rem 1rem 1rem;
+    &__title {
+        font-size: 2rem;
+        line-height: 2rem;
+    }
+    &__block {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        &-right{
+            display: flex;
+            flex-direction: column;
+        }
+    }
+    &__namebox {
+        min-height: 2.25rem;
+        width: 100%;
+        margin-top: .25rem;
+        padding: .75rem;
+        border-radius: .25rem;
+        border: 1px solid colors.$secondary-mercury;
+        @include tablet {
+            padding: 1rem;
+        }
+    }
+    &__commentbox {
+        min-height: 8rem;
+        max-height: auto;
+        width: 80vw;
+        margin-top: .25rem;
+        padding: .75rem;
+        border-radius: .25rem;
+        border: 1px solid colors.$secondary-mercury;
+        text-align: start;
+        @include tablet {
+            padding: 1rem;
+        }
+    }
+    &__box-description {
+        color: colors.$primary-silver;
+        font-weight: 600;
+    }
+    &__photo {
+        border-radius: 50%;
+        width: 2.25rem;
+        height: 2.25rem;
+        margin-right: 1rem;
+        margin-top: 1.5rem;
+
+    }
+    &__button {
+        background-color: colors.$primary-black;
+        color: colors.$primary-white;
+        height: 2.5rem;
+        min-width: 9.375rem;
+        max-width: 100%;
+        padding: 2rem;
+        border-radius: 4px;
+        font-size: 16px;
+        font-weight: 600;
+        margin-bottom: 1rem;
+        @include tablet {
+            font-size: 12px;  
+        }
+        &:hover {
+            background-color: colors.$secondary-black;
+            color: colors.$primary-white;
+        }
+
+    }
+}
+
+
+.comment {
+    margin: 0;
+    width: auto;
+    height: auto;
+    &__block {
+    display: flex;
+    border-top: 1px solid colors.$secondary-mercury;
+    padding-top: 1rem;
+    &-righttop {
+        display: flex;
+        justify-content: space-between;
+    }
+    }
+    &__avatar {
+      width: 2.25rem;
+      height: 2.25rem;
+      border-radius: 50%;
+      margin-right: 1rem;
+      background-color: colors.$secondary-mercury;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+  
+    &__paragraph {
+      font-size: .875rem;
+    }
+    &__date {
+        color: colors.$primary-silver;
+    }
+    &__name {
+      font-weight: 600;
+    }
+  }
+
 .footer {
     background-color: colors.$primary-black;
     color: colors.$primary-white;

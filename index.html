@@ -56,7 +56,23 @@
         <img class="photo-gallery__img"src="./assets/Images/Photo-gallery-9.jpg">
     </div>
 </section>
-
+<section class="jointheconversation">
+    <h1 class="jointheconversation__title font--demi">Join the Conversation</h1>
+    <form class="jointheconversation__block">
+        <div>
+            <img class="jointheconversation__photo"src="./assets/Images/Mohan-muruge.jpg">
+        </div>
+        <div class="jointheconversation__block-right">
+            <label class="jointheconversation__box-description" for="name">NAME</label>
+            <input class="jointheconversation__namebox" type="text" name="name" placeholder="Enter your name"><br />
+            <input class="jointheconversation__date" style="display: none;" type="date" name="date"><br />
+            <label class="jointheconversation__box-description" for="comment">COMMENT</label>
+            <input class="jointheconversation__commentbox" type="text" name="comment" placeholder="Add a new comment"><br />
+            <button class="jointheconversation__button" type="submit">COMMENT </button>
+        </div>
+    </form>
+<div class="comment" id="comment"></div>
+</section>
 
 <footer class="footer">
     <div class="footer__desktop-container">
@@ -92,5 +108,6 @@
     </div>
     <div class="footer__logo--desktop"></div>
 </footer>
+<script src="./scripts/index-pages.js"></script>
 </body>
 </html>

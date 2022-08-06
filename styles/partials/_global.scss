@@ -71,6 +71,10 @@ body {
             padding-top: 1.5rem;
             padding-bottom: 1.5rem;
         }
+        &:hover{
+            border-bottom: .1875rem solid colors.$primary-white;
+            font-weight: 600;
+        }
         &--feature {
             border-bottom: .1875rem solid colors.$primary-white;
             font-weight: 600;

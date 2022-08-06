@@ -90,6 +90,10 @@ body {
     padding-bottom: 1.5rem;
   }
 }
+.header__navbar:hover {
+  border-bottom: 0.1875rem solid #FFFFFF;
+  font-weight: 600;
+}
 .header__navbar--feature {
   border-bottom: 0.1875rem solid #FFFFFF;
   font-weight: 600;

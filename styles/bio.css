@@ -90,6 +90,10 @@ body {
     padding-bottom: 1.5rem;
   }
 }
+.header__navbar:hover {
+  border-bottom: 0.1875rem solid #FFFFFF;
+  font-weight: 600;
+}
 .header__navbar--feature {
   border-bottom: 0.1875rem solid #FFFFFF;
   font-weight: 600;
@@ -304,6 +308,117 @@ body {
 .silver-background {
   background-color: #FAFAFA;
   background-size: 150vw;
+}
+
+.jointheconversation {
+  padding: 0rem 1rem 1rem 1rem;
+}
+.jointheconversation__title {
+  font-size: 2rem;
+  line-height: 2rem;
+}
+.jointheconversation__block {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+.jointheconversation__block-right {
+  display: flex;
+  flex-direction: column;
+}
+.jointheconversation__namebox {
+  min-height: 2.25rem;
+  width: 100%;
+  margin-top: 0.25rem;
+  padding: 0.75rem;
+  border-radius: 0.25rem;
+  border: 1px solid #E1E1E1;
+}
+@media (min-width: 768px) {
+  .jointheconversation__namebox {
+    padding: 1rem;
+  }
+}
+.jointheconversation__commentbox {
+  min-height: 8rem;
+  max-height: auto;
+  width: 80vw;
+  margin-top: 0.25rem;
+  padding: 0.75rem;
+  border-radius: 0.25rem;
+  border: 1px solid #E1E1E1;
+  text-align: start;
+}
+@media (min-width: 768px) {
+  .jointheconversation__commentbox {
+    padding: 1rem;
+  }
+}
+.jointheconversation__box-description {
+  color: #AFAFAF;
+  font-weight: 600;
+}
+.jointheconversation__photo {
+  border-radius: 50%;
+  width: 2.25rem;
+  height: 2.25rem;
+  margin-right: 1rem;
+  margin-top: 1.5rem;
+}
+.jointheconversation__button {
+  background-color: #323232;
+  color: #FFFFFF;
+  height: 2.5rem;
+  min-width: 9.375rem;
+  max-width: 100%;
+  padding: 2rem;
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+@media (min-width: 768px) {
+  .jointheconversation__button {
+    font-size: 12px;
+  }
+}
+.jointheconversation__button:hover {
+  background-color: #000000;
+  color: #FFFFFF;
+}
+
+.comment {
+  margin: 0;
+  width: auto;
+  height: auto;
+}
+.comment__block {
+  display: flex;
+  border-top: 1px solid #E1E1E1;
+  padding-top: 1rem;
+}
+.comment__block-righttop {
+  display: flex;
+  justify-content: space-between;
+}
+.comment__avatar {
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: 50%;
+  margin-right: 1rem;
+  background-color: #E1E1E1;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.comment__paragraph {
+  font-size: 0.875rem;
+}
+.comment__date {
+  color: #AFAFAF;
+}
+.comment__name {
+  font-weight: 600;
 }
 
 .footer {
