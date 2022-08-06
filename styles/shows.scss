@@ -72,3 +72,55 @@
         font-size:10px;
     }
 }
+
+.shows {
+    padding: 0rem 1rem 1rem 1rem;
+    &__title {
+        font-size: 2rem;
+        line-height: 2rem;
+    }
+    &__block {
+        display: flex; 
+        flex-direction:column;
+        border-top: 1px solid colors.$secondary-mercury;
+    }
+    &__date {
+        font-weight: 600;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+    &__venue {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+    &__location {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+    &__description {
+        color: colors.$primary-silver;
+        font-weight: 600;
+        margin-top: 1rem;
+    }
+    &__button {
+        background-color: colors.$primary-black;
+        color: colors.$primary-white;
+        min-width: 9.375rem;
+        max-width: 100%;
+        padding: 1rem;
+        border-radius: 4px;
+        font-size: 1.5rem;
+        font-weight: 500;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        @include tablet {
+            font-size: .75rem;  
+        }
+        &:hover {
+            background-color: colors.$secondary-black;
+            color: colors.$primary-white;
+        }
+    }
+
+
+}

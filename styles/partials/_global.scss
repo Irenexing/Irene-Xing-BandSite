@@ -90,3 +90,83 @@ body {
     }
 }
 
+.footer {
+    background-color: colors.$primary-black;
+    color: colors.$primary-white;
+    padding: 1rem;
+    font-size: .8125rem;
+    line-height: 1.125rem;
+    @include desktop {
+        display: flex;
+        justify-content: space-between;
+        padding: 1.5rem 7.875rem 3rem 7.875rem;
+    }
+
+    &__title {
+        font-size: 2rem;
+        line-height: 2rem;
+        margin-top: 1rem;
+        @include tablet {
+            font-size: 2.25rem;
+            line-height: 2.75rem;
+            width: auto;
+            &-container {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+            }
+        }
+    }
+    &__icon {
+        display: flex;
+        width:30%;
+        justify-content: space-between;
+        @include tablet {
+            width: 20%;
+            justify-content: space-around;
+            margin-left: -7.5rem;
+        }
+    }
+    &__logo {
+        background-image: url('../assets/Logo/Logo-bandsite.svg');
+        background-size: contain;
+        background-repeat: no-repeat;
+        height: 1.25rem;
+        margin-top: 3rem;
+        @include tablet {
+            background-image: none;
+            &--tablet {
+            background-image: url('../assets/Logo/Logo-bandsite.svg');
+            background-size: contain;
+            background-repeat: no-repeat;
+            height: 1.25rem;
+            min-width: 7.5rem;
+            @include desktop {
+                background-image: none;
+            }
+            } 
+        }
+        @include desktop {
+            background-image: none;
+            &--desktop {
+                background-image: url('../assets/Logo/Logo-bandsite.svg');
+                background-size: contain;
+                background-repeat: no-repeat;
+                height: 1.25rem;
+                min-width: 7.5rem;
+                margin: 1rem;
+                } 
+        }
+    }
+    &__contact {
+        @include tablet {
+            display: flex;
+            justify-content: space-between
+            }
+        &-block {
+        @include desktop {
+            margin-right: 5rem;
+        }
+    }
+}
+}

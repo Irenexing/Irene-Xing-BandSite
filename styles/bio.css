@@ -109,6 +109,98 @@ body {
   }
 }
 
+.footer {
+  background-color: #323232;
+  color: #FFFFFF;
+  padding: 1rem;
+  font-size: 0.8125rem;
+  line-height: 1.125rem;
+}
+@media (min-width: 1200px) {
+  .footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 1.5rem 7.875rem 3rem 7.875rem;
+  }
+}
+.footer__title {
+  font-size: 2rem;
+  line-height: 2rem;
+  margin-top: 1rem;
+}
+@media (min-width: 768px) {
+  .footer__title {
+    font-size: 2.25rem;
+    line-height: 2.75rem;
+    width: auto;
+  }
+  .footer__title-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+.footer__icon {
+  display: flex;
+  width: 30%;
+  justify-content: space-between;
+}
+@media (min-width: 768px) {
+  .footer__icon {
+    width: 20%;
+    justify-content: space-around;
+    margin-left: -7.5rem;
+  }
+}
+.footer__logo {
+  background-image: url("../assets/Logo/Logo-bandsite.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 1.25rem;
+  margin-top: 3rem;
+}
+@media (min-width: 768px) {
+  .footer__logo {
+    background-image: none;
+  }
+  .footer__logo--tablet {
+    background-image: url("../assets/Logo/Logo-bandsite.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 1.25rem;
+    min-width: 7.5rem;
+  }
+}
+@media (min-width: 768px) and (min-width: 1200px) {
+  .footer__logo--tablet {
+    background-image: none;
+  }
+}
+@media (min-width: 1200px) {
+  .footer__logo {
+    background-image: none;
+  }
+  .footer__logo--desktop {
+    background-image: url("../assets/Logo/Logo-bandsite.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 1.25rem;
+    min-width: 7.5rem;
+    margin: 1rem;
+  }
+}
+@media (min-width: 768px) {
+  .footer__contact {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+@media (min-width: 1200px) {
+  .footer__contact-block {
+    margin-right: 5rem;
+  }
+}
+
 .hero__title {
   color: #FFFFFF;
   position: absolute;
@@ -368,13 +460,12 @@ body {
 .jointheconversation__button {
   background-color: #323232;
   color: #FFFFFF;
-  height: 2.5rem;
   min-width: 9.375rem;
   max-width: 100%;
-  padding: 2rem;
+  padding: 1rem;
   border-radius: 4px;
-  font-size: 16px;
-  font-weight: 600;
+  font-size: 1.5rem;
+  font-weight: 500;
   margin-bottom: 1rem;
 }
 @media (min-width: 768px) {
@@ -419,96 +510,4 @@ body {
 }
 .comment__name {
   font-weight: 600;
-}
-
-.footer {
-  background-color: #323232;
-  color: #FFFFFF;
-  padding: 1rem;
-  font-size: 0.8125rem;
-  line-height: 1.125rem;
-}
-@media (min-width: 1200px) {
-  .footer {
-    display: flex;
-    justify-content: space-between;
-    padding: 1.5rem 7.875rem 3rem 7.875rem;
-  }
-}
-.footer__title {
-  font-size: 2rem;
-  line-height: 2rem;
-  margin-top: 1rem;
-}
-@media (min-width: 768px) {
-  .footer__title {
-    font-size: 2.25rem;
-    line-height: 2.75rem;
-    width: auto;
-  }
-  .footer__title-container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-}
-.footer__icon {
-  display: flex;
-  width: 30%;
-  justify-content: space-between;
-}
-@media (min-width: 768px) {
-  .footer__icon {
-    width: 20%;
-    justify-content: space-around;
-    margin-left: -7.5rem;
-  }
-}
-.footer__logo {
-  background-image: url("../assets/Logo/Logo-bandsite.svg");
-  background-size: contain;
-  background-repeat: no-repeat;
-  height: 1.25rem;
-  margin-top: 3rem;
-}
-@media (min-width: 768px) {
-  .footer__logo {
-    background-image: none;
-  }
-  .footer__logo--tablet {
-    background-image: url("../assets/Logo/Logo-bandsite.svg");
-    background-size: contain;
-    background-repeat: no-repeat;
-    height: 1.25rem;
-    min-width: 7.5rem;
-  }
-}
-@media (min-width: 768px) and (min-width: 1200px) {
-  .footer__logo--tablet {
-    background-image: none;
-  }
-}
-@media (min-width: 1200px) {
-  .footer__logo {
-    background-image: none;
-  }
-  .footer__logo--desktop {
-    background-image: url("../assets/Logo/Logo-bandsite.svg");
-    background-size: contain;
-    background-repeat: no-repeat;
-    height: 1.25rem;
-    min-width: 7.5rem;
-    margin: 1rem;
-  }
-}
-@media (min-width: 768px) {
-  .footer__contact {
-    display: flex;
-    justify-content: space-between;
-  }
-}
-@media (min-width: 1200px) {
-  .footer__contact-block {
-    margin-right: 5rem;
-  }
 }/*# sourceMappingURL=bio.css.map */

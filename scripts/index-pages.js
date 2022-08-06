@@ -1,5 +1,4 @@
-const conversations = {
-    comments: [
+const comments= [
       {
         name: "Connor Walton",
         date: "02/17/2021",
@@ -18,15 +17,14 @@ const conversations = {
         content:
           "I can't stop listening. Every time I hear one of their songs - the vocals - it gives me goosebumps. Shivers straight down my spine. What a beautiful expression of creativity. Can't get enough.",
       },
-    ],
-  };
+    ];
 
   const conversation = document.querySelector(".comment");
   
-  function createComments(newComments) {
+  function createComments() {
     conversation.innerHTML = null;
   
-    for (let i = 0; i < conversations.comments.length; i++) {
+    for (let i = 0; i < comments.length; i++) {
       const commentBlock = document.createElement("div");
       commentBlock.classList.add("comment__block");
       conversation.appendChild(commentBlock);
@@ -49,19 +47,19 @@ const conversations = {
 
       const name = document.createElement("name");
       name.classList.add("comment__name");
-      name.innerText = conversations.comments[i].name;
+      name.innerText = comments[i].name;
       commentBlockRightTop.appendChild(name);
 
       const date = document.createElement("date");
       date.classList.add("comment__date");
-      date.innerText = conversations.comments[i].date;
+      date.innerText = comments[i].date;
       commentBlockRightTop.appendChild(date);
     
       const paragraph = document.createElement("p");
       paragraph.classList.add("comment__paragraph");
-      paragraph.innerText = conversations.comments[i].content;
+      paragraph.innerText = comments[i].content;
       commentBlockRight.appendChild(paragraph);
     }
   }
   
-  createComments(conversations.comments);
+  createComments(comments);
