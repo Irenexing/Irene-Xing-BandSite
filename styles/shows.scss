@@ -19,29 +19,34 @@
         @include tablet {
             font-size: 3.75rem;
             line-height: 4.25rem;
-            top: 40vw;
-            left: 40rem;
+            top: 25vw;
+            left: 2rem;
         }
         @include desktop {
             top: 35vw;
-            left: 21rem;
+            left: 7rem;
+            width: 39%;
         }
     &-description {
         color: colors.$primary-white;
         position: absolute;
         justify-content: flex-start;
-        top: 35vw;
+        font-size: 1.5rem;
+        top: 30vw;
         left: 1rem;
         z-index: 2;
         @include tablet {
-            font-size: 3.75rem;
+            font-size: 2rem;
+            font-weight: 500;
             line-height: 4.25rem;
-            top: 40vw;
-            left: 40rem;
+            top: 20vw;
+            left: 2rem;
         }
         @include desktop {
-            top: 35vw;
-            left: 21rem;
+            top: 30vw;
+            left: 7rem;
+            font-size: 1.5rem;
+            font-weight: 500;
         }
     }
 }
@@ -50,7 +55,12 @@
          &-img {
             height:auto;
             max-width: 100%;
-         }
+            @include desktop {
+            background-size: cover;
+            height: 800px;
+            width: 100%;
+            overflow: hidden;
+         }}
          &-layer {
             background-color:colors.$primary-black;
             width: 100%;
@@ -59,6 +69,11 @@
             background-size: cover;
             position: absolute;
             z-index: 1;
+            @include desktop {
+                height: 800px;
+                width: 100%;
+                overflow: hidden;
+             }
          }
     }
     &__soundcloud {
@@ -70,37 +85,101 @@
         width: 93%;
         height: auto;
         font-size:10px;
+        @include tablet {
+            width: 63%;
+            left: 2rem;
+        }
+        @include desktop {
+            top: 40vw;
+            left: 50rem;
+            width: 30%
+        }
     }
 }
 
 .shows {
-    padding: 0rem 1rem 1rem 1rem;
+    @include desktop {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+    &--desktop {
+        @include desktop {
+            display: flex;
+            flex-direction: column;
+            width: 70%;
+            margin-top: 2rem;
+        }
+    }
     &__title {
         font-size: 2rem;
+        font-weight: 600;
         line-height: 2rem;
+        margin: 2rem 1rem;
+        @include tablet {
+            font-size: 2.25rem;
+            line-height: 2.75rem;
+            margin: 4rem 2rem;
+        }
+        @include desktop {
+            margin: 4rem 7rem;
+        }
     }
     &__block {
         display: flex; 
         flex-direction:column;
-        border-top: 1px solid colors.$secondary-mercury;
+        border-bottom: 1px solid colors.$secondary-mercury;
+        padding: 0rem 1rem 1rem 1rem;
+        @include tablet {
+            flex-direction:row;
+            align-items: center;
+            padding: 0rem 2rem 1rem 2rem;
+        }
+        &:hover {
+            background-color: colors.$secondary-alabaster;
+        }
+        &::selection{
+            background-color: colors.$secondary-mercury;
+        }
     }
     &__date {
         font-weight: 600;
         margin-top: 1rem;
         margin-bottom: 1rem;
+        width: 25%;
     }
     &__venue {
         margin-top: 1rem;
         margin-bottom: 1rem;
+        width: 25%;
     }
     &__location {
         margin-top: 1rem;
         margin-bottom: 1rem;
+        width: 25%;
     }
     &__description {
         color: colors.$primary-silver;
         font-weight: 600;
         margin-top: 1rem;
+        @include tablet{
+            display:none;
+        }
+    }
+    &__tablet-topcontainer {
+        display: none;
+        @include tablet {
+            display: flex;
+            list-style: none;
+            padding: 2rem;
+        }
+    }
+    &__tablet-top {
+        @include tablet {
+        width: 25%;
+        color: colors.$primary-silver;
+        font-weight: 600;
+        }
     }
     &__button {
         background-color: colors.$primary-black;
@@ -108,19 +187,21 @@
         min-width: 9.375rem;
         max-width: 100%;
         padding: 1rem;
-        border-radius: 4px;
+        border-radius: .25rem;
         font-size: 1.5rem;
         font-weight: 500;
         margin-top: 1rem;
         margin-bottom: 1rem;
         @include tablet {
-            font-size: .75rem;  
+         padding-left: 2rem;
+         padding-right: 2rem;
+         margin-bottom: 0rem;
         }
         &:hover {
             background-color: colors.$secondary-black;
             color: colors.$primary-white;
         }
+        }
     }
 
 
-}

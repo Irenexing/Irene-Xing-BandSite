@@ -112,7 +112,7 @@ body {
 .footer {
   background-color: #323232;
   color: #FFFFFF;
-  padding: 1rem;
+  padding-top: 1rem;
   font-size: 0.8125rem;
   line-height: 1.125rem;
 }
@@ -405,6 +405,16 @@ body {
 .jointheconversation {
   padding: 0rem 1rem 1rem 1rem;
 }
+@media (min-width: 768px) {
+  .jointheconversation {
+    padding: 3rem 2.25rem 2.25rem 2.25rem;
+  }
+}
+@media (min-width: 1200px) {
+  .jointheconversation {
+    padding: 1.5rem 7.875rem 3rem 7.875rem;
+  }
+}
 .jointheconversation__title {
   font-size: 2rem;
   line-height: 2rem;
@@ -413,6 +423,11 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
+}
+@media (min-width: 768px) {
+  .jointheconversation__block {
+    padding: 4.5rem;
+  }
 }
 .jointheconversation__block-right {
   display: flex;
@@ -429,6 +444,7 @@ body {
 @media (min-width: 768px) {
   .jointheconversation__namebox {
     padding: 1rem;
+    width: 100%;
   }
 }
 .jointheconversation__commentbox {
@@ -456,6 +472,12 @@ body {
   height: 2.25rem;
   margin-right: 1rem;
   margin-top: 1.5rem;
+}
+@media (min-width: 768px) {
+  .jointheconversation__photo {
+    width: 3rem;
+    height: 3rem;
+  }
 }
 .jointheconversation__button {
   background-color: #323232;

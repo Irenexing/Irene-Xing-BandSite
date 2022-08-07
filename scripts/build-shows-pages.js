@@ -38,6 +38,7 @@ const scheduleArray= [
     schedule.innerHTML = null;
   
     for (let i = 0; i < scheduleArray.length; i++) {
+
       const scheduleBlock = document.createElement("div");
       scheduleBlock.classList.add("shows__block");
       schedule.appendChild(scheduleBlock);
@@ -75,8 +76,13 @@ const scheduleArray= [
       const button = document.createElement("button");
       button.classList.add("shows__button");
       button.innerText = "BUY TICKETS";
+      button.type = "submit";
       scheduleBlock.appendChild(button);
+
     }
   };
   
   console.log (createShows(scheduleArray));
+
+
+

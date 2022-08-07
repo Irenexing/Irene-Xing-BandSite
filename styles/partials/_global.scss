@@ -93,7 +93,7 @@ body {
 .footer {
     background-color: colors.$primary-black;
     color: colors.$primary-white;
-    padding: 1rem;
+    padding-top: 1rem;
     font-size: .8125rem;
     line-height: 1.125rem;
     @include desktop {
