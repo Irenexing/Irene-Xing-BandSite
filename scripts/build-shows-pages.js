@@ -78,11 +78,23 @@ const scheduleArray= [
       button.innerText = "BUY TICKETS";
       button.type = "submit";
       scheduleBlock.appendChild(button);
+      button.addEventListener('click', function onClick(event) {
+        for (let i = 0; i < scheduleArray.length; i++) {
 
-    }
-  };
+        scheduleBlock.style.backgroundColor = "#E1E1E1";
+
+      }});
+      }
+    };
+    
+
+  
+
   
   console.log (createShows(scheduleArray));
+
+
+ 
 
 
 

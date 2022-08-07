@@ -362,10 +362,7 @@ body {
 .shows__block:hover {
   background-color: #FAFAFA;
 }
-.shows__block::-moz-selection {
-  background-color: #E1E1E1;
-}
-.shows__block::selection {
+.shows__block--selected {
   background-color: #E1E1E1;
 }
 .shows__date {
