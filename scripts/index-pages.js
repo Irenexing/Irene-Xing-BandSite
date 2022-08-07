@@ -66,14 +66,14 @@ const comments = [
     createComments(comments);
 
 
-  let today = new Date();
-  let day = today.getDate();
-  let month = today.getMonth()+1;
-  let year = today.getFullYear();
+    let today = new Date();
+    let day = today.getDate();
+    let month = today.getMonth()+1;
+    let year = today.getFullYear();
 
-  if (day<10)day ="0"+ day;
-  if (month <10)month ="0"+month;
-  let dateFormated = month +"/" + day +"/" +year;
+    if (day<10)day ="0"+ day;
+    if (month <10)month ="0"+month;
+    let dateFormated = month +"/" + day +"/" +year;
 
     const button = document.querySelector(".jointheconversation__button");
 
@@ -81,11 +81,8 @@ const comments = [
       console.log("click");
 
       let newName = document.querySelector(".jointheconversation__namebox");
-      let newDate = document.querySelector(".jointheconversation__date");
       let newContent = document.querySelector(".jointheconversation__commentbox");
 
-      console.log(newName.value, newContent.value);
-    
       const commentBlock = document.createElement("div");
       commentBlock.classList.add("comment__block");
       conversation.insertBefore(commentBlock, conversation.firstChild);
@@ -120,34 +117,12 @@ const comments = [
       paragraph.classList.add("comment__paragraph");
       paragraph.innerText = newContent.value;
       commentBlockRight.appendChild(paragraph);
-    
     }
     );
   
 
-  let parent = document.querySelector(".comment__block");
-  
 
   
-  for(let x = 0; x < comments.length; x++) {
-  
-      const commentBlock = document.createElement("div");
-      commentBlock.classList.add("comment__block");
-  
-  
-      commentBlockRightTop.append(buildElement(x,"name","comment__name","name"));
-  
-      commentBlockRightTop.append(buildElement(x,"date","comment__date","date"));
-  
-      commentBlockLeft.append(buildElement(x,"img","comment__avatar","./assets/Images/Mohan-muruge.jpg"));
-  
-      for(let i=0; i < comments[x].content.length; i++) {
-  
-          commentBlockRight.append(buildElement(x,"p","comment__paragraph","content",i));
-      }
-  
-      parent.append(commentBlock);
-  }
 
 
 

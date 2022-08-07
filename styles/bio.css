@@ -75,7 +75,6 @@ body {
   }
 }
 .header__navbar {
-  text-decoration: none;
   list-style: none;
   width: 50%;
   text-align: center;
@@ -89,6 +88,10 @@ body {
     padding-top: 1.5rem;
     padding-bottom: 1.5rem;
   }
+}
+.header__navbar-link {
+  text-decoration: none;
+  color: #FFFFFF;
 }
 .header__navbar:hover {
   border-bottom: 0.1875rem solid #FFFFFF;
@@ -112,9 +115,14 @@ body {
 .footer {
   background-color: #323232;
   color: #FFFFFF;
-  padding-top: 1rem;
+  padding: 1rem;
   font-size: 0.8125rem;
   line-height: 1.125rem;
+}
+@media (min-width: 768px) {
+  .footer {
+    padding: 1.5rem 2.25rem 3rem 2.25rem;
+  }
 }
 @media (min-width: 1200px) {
   .footer {
@@ -419,6 +427,13 @@ body {
   font-size: 2rem;
   line-height: 2rem;
 }
+@media (min-width: 768px) {
+  .jointheconversation__title {
+    font-size: 2.25rem;
+    line-height: 2.75rem;
+    margin-top: 0;
+  }
+}
 .jointheconversation__block {
   display: flex;
   flex-direction: row;
@@ -426,7 +441,13 @@ body {
 }
 @media (min-width: 768px) {
   .jointheconversation__block {
-    padding: 4.5rem;
+    padding: 1rem 4.5rem;
+  }
+}
+@media (min-width: 1200px) {
+  .jointheconversation__block {
+    padding: 1rem 12rem;
+    justify-content: center;
   }
 }
 .jointheconversation__block-right {
@@ -444,7 +465,12 @@ body {
 @media (min-width: 768px) {
   .jointheconversation__namebox {
     padding: 1rem;
-    width: 100%;
+    width: auto;
+  }
+}
+@media (min-width: 1200px) {
+  .jointheconversation__namebox {
+    width: 30vw;
   }
 }
 .jointheconversation__commentbox {
@@ -460,6 +486,12 @@ body {
 @media (min-width: 768px) {
   .jointheconversation__commentbox {
     padding: 1rem;
+    width: 65vw;
+  }
+}
+@media (min-width: 1200px) {
+  .jointheconversation__commentbox {
+    width: 30vw;
   }
 }
 .jointheconversation__box-description {
@@ -507,8 +539,18 @@ body {
 }
 .comment__block {
   display: flex;
-  border-top: 1px solid #E1E1E1;
+  border-bottom: 1px solid #E1E1E1;
   padding-top: 1rem;
+}
+@media (min-width: 768px) {
+  .comment__block {
+    margin: 1rem 4rem;
+  }
+}
+@media (min-width: 1200px) {
+  .comment__block {
+    margin: 1rem 20rem;
+  }
 }
 .comment__block-righttop {
   display: flex;
@@ -523,6 +565,12 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+}
+@media (min-width: 768px) {
+  .comment__avatar {
+    width: 3rem;
+    height: 3rem;
+  }
 }
 .comment__paragraph {
   font-size: 0.875rem;

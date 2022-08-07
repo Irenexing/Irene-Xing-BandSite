@@ -59,7 +59,6 @@ body {
         }
     }
     &__navbar {
-        text-decoration: none;
         list-style: none;
         width: 50%;
         text-align: center;
@@ -70,6 +69,10 @@ body {
             margin: 0 1.5rem;
             padding-top: 1.5rem;
             padding-bottom: 1.5rem;
+        }
+        &-link {
+            text-decoration: none;
+            color: colors.$primary-white;
         }
         &:hover{
             border-bottom: .1875rem solid colors.$primary-white;
@@ -93,9 +96,12 @@ body {
 .footer {
     background-color: colors.$primary-black;
     color: colors.$primary-white;
-    padding-top: 1rem;
+    padding: 1rem;
     font-size: .8125rem;
     line-height: 1.125rem;
+    @include tablet {
+        padding: 1.5rem 2.25rem 3rem 2.25rem;
+    }
     @include desktop {
         display: flex;
         justify-content: space-between;

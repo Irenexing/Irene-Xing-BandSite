@@ -180,19 +180,29 @@
     @include tablet {
         padding:  3rem 2.25rem 2.25rem 2.25rem;
        }
-    @include desktop {
+       @include desktop {
         padding: 1.5rem 7.875rem 3rem 7.875rem;
     }
     &__title {
         font-size: 2rem;
         line-height: 2rem;
+        @include tablet {
+            font-size: 2.25rem;
+            line-height: 2.75rem;
+            margin-top: 0;
+        }
+
     }
     &__block {
         display: flex;
         flex-direction: row;
         justify-content: flex-start;
         @include tablet {
-            padding: 4.5rem;
+            padding: 1rem 4.5rem;
+        }
+        @include desktop {
+            padding: 1rem 12rem;
+            justify-content: center;
         }
         &-right{
             display: flex;
@@ -208,7 +218,10 @@
         border: 1px solid colors.$secondary-mercury;
         @include tablet {
             padding: 1rem;
-            width: 100%;
+            width: auto;
+        }
+        @include desktop {
+            width: 30vw;
         }
     }
     &__commentbox {
@@ -222,6 +235,10 @@
         text-align: start;
         @include tablet {
             padding: 1rem;
+            width: 65vw;
+        }
+        @include desktop {
+            width: 30vw;
         }
     }
     &__box-description {
@@ -268,8 +285,14 @@
     height: auto;
     &__block {
     display: flex;
-    border-top: 1px solid colors.$secondary-mercury;
+    border-bottom: 1px solid colors.$secondary-mercury;
     padding-top: 1rem;
+    @include tablet {
+        margin: 1rem 4rem;
+    }
+    @include desktop {
+        margin: 1rem 20rem;
+    }
     &-righttop {
         display: flex;
         justify-content: space-between;
@@ -284,6 +307,10 @@
       background-position: center;
       background-repeat: no-repeat;
       background-size: cover;
+      @include tablet{
+        width: 3rem;
+        height: 3rem;
+    }
     }
   
     &__paragraph {
