@@ -1,5 +1,11 @@
-const scheduleArray= [];
+let scheduleArray= [];
 
+
+axios.get("https://project-1-api.herokuapp.com/showdates?api_key=d35264c7-f254-44b3-811c-6df95861ead6").then((response) => {
+
+  scheduleArray = response.data;
+  createShows();
+}); 
 
 const schedule = document.querySelector(".shows__schedule");
 
@@ -19,7 +25,8 @@ for (let i = 0; i < scheduleArray.length; i++) {
 
   const date = document.createElement("date");
   date.classList.add("shows__date");
-  date.innerText = scheduleArray[i].date;
+  let newDate = new Date(scheduleArray[i].date);
+  date.innerText = newDate.toLocaleDateString("en-US");
   scheduleBlock.appendChild(date);
 
   const venueDescription = document.createElement("venuedescription");
@@ -55,16 +62,6 @@ for (let i = 0; i < scheduleArray.length; i++) {
   }});
   }
 };
-
-axios.get("https://project-1-api.herokuapp.com/showdates?api_key=d35264c7-f254-44b3-811c-6df95861ead6").then((response) => {
-
-  scheduleArray = response.data;
-  createShows();
-}); 
-
-
-
-console.log (createShows(scheduleArray));
 
 
 
