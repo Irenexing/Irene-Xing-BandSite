@@ -281,23 +281,27 @@
 
 .comment {
     margin: 0;
-    width: auto;
+    width: 100%;
     height: auto;
-    &__block {
-    display: flex;
-    border-bottom: 1px solid colors.$secondary-mercury;
-    padding-top: 1rem;
-    @include tablet {
-        margin: 1rem 4rem;
-    }
-    @include desktop {
-        margin: 1rem 20rem;
-    }
-    &-righttop {
+      &__block {
+        display: flex;
+        border-bottom: 1px solid colors.$secondary-mercury;
+        padding-top: 1rem;
+  
+        @include tablet {
+          margin: 1rem 4rem;
+        }
+        @include desktop {
+          margin: 1rem 20rem;
+        }
+        &-right {
+            width:  100%;
+        }
+        &-righttop {
         display: flex;
         justify-content: space-between;
-    }
-    }
+        }
+        }
     &__avatar {
       width: 2.25rem;
       height: 2.25rem;

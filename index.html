@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="Stylesheet" href="./styles/bio.css">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <title>BandSite</title>
 </head>
 <body>
@@ -32,7 +33,7 @@
 </section>
 
 <section class="about">
-    <h1 class="about__title font--demi">About the Musicians</h1>
+    <h2 class="about__title font--demi">About the Musicians</h2>
     <img class="about__img" src="./assets/Images/band.jpg" alt="about image"/>
     <q class="font--demi about__quote">We push each other to be the best. It’s not uncommon for one of us to say ‘this needs to be better, back to the drawing board’</q> 
     <p class="font--demi about__quote about__quote--tablet">- Bryan Teddy, lead vocalist of The Bees Knees</p>
@@ -47,7 +48,7 @@
 </section>
 
 <section class="photo-gallery silver-background">
-    <h1 class="photo-gallery__title font--demi">Photo Gallery</h1>
+    <h2 class="photo-gallery__title font--demi">Photo Gallery</h2>
     <div class="photo-gallery__imgs">
         <img class="photo-gallery__img"src="./assets/Images/Photo-gallery-1.jpg">
         <img class="photo-gallery__img"src="./assets/Images/Photo-gallery-2.jpg">
@@ -61,8 +62,8 @@
     </div>
 </section>
 <section class="jointheconversation">
-    <h1 class="jointheconversation__title font--demi">Join the Conversation</h1>
-    <form class="jointheconversation__block">
+    <h2 class="jointheconversation__title font--demi">Join the Conversation</h2>
+    <form id="jointheconversation__block" class="jointheconversation__block">
         <div>
             <img class="jointheconversation__photo"src="./assets/Images/Mohan-muruge.jpg">
         </div>
@@ -72,7 +73,7 @@
             <input class="jointheconversation__date" style="display: none;" type="date" name="date"><br />
             <label class="jointheconversation__box-description" for="comment">COMMENT</label>
             <input class="jointheconversation__commentbox" type="text" name="comment" placeholder="Add a new comment"><br />
-            <button class="jointheconversation__button" type="button">COMMENT </button>
+            <button class="jointheconversation__button">COMMENT </button>
         </div>
     </form>
 <div class="comment" id="comment"></div>
@@ -81,7 +82,7 @@
 <footer class="footer">
     <div class="footer__desktop-container">
         <div class="footer__title-container">
-            <h1 class="footer__title font--demi">Get In Touch</h1>
+            <h2 class="footer__title font--demi">Get In Touch</h2>
             <div class="footer__icon">
                 <a href="https://instagram.com"><img class="footer__icon-img"src="./assets/Icons/SVG/Icon-instagram.svg" alt="Instagram" ></a>
                 <a href="https://facebook.com"><img class="footer__icon-img"src="./assets/Icons/SVG/Icon-facebook.svg" alt="Facebook"></a>

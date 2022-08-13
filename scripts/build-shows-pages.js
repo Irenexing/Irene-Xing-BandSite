@@ -1,35 +1,4 @@
-const scheduleArray= [
-  {
-    date: "Mon Sept 06 2021",
-    venue: "Ronald Lane",
-    location: "San Francisco,CA",
-  },
-  {
-    date: "Tues Sept 21 2021",
-    venue: "Pier 3 east",
-    location: "San Francisco,CA",
-  },
-  {
-    date: "Fri Oct 15 2021",
-    venue: "View Lounge",
-    location: "San Francisco,CA",
-  },
-  {
-    date: "Sat Nov 06 2021",
-    venue: "Hyatt Agency",
-    location: "San Francisco,CA",
-  },
-  {
-    date: "Fri Nov 26 2021",
-    venue: "Moscow Center",
-    location: "San Francisco,CA",
-  },
-  {
-    date: "Wed Dec 15 2021",
-    venue: "Press Club",
-    location: "San Francisco,CA",
-  },
-];
+const scheduleArray= [];
 
 
 const schedule = document.querySelector(".shows__schedule");
@@ -60,7 +29,7 @@ for (let i = 0; i < scheduleArray.length; i++) {
 
   const venue = document.createElement("venue");
   venue.classList.add("shows__venue");
-  venue.innerText = scheduleArray[i].venue;
+  venue.innerText = scheduleArray[i].place;
   scheduleBlock.appendChild(venue);
 
   const locationDescription = document.createElement("locationdescription");
@@ -87,12 +56,15 @@ for (let i = 0; i < scheduleArray.length; i++) {
   }
 };
 
+axios.get("https://project-1-api.herokuapp.com/showdates?api_key=d35264c7-f254-44b3-811c-6df95861ead6").then((response) => {
 
+  scheduleArray = response.data;
+  createShows();
+}); 
 
 
 
 console.log (createShows(scheduleArray));
-
 
 
 
